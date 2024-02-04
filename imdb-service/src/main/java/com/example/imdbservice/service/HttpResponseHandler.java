@@ -13,7 +13,7 @@ import java.net.http.HttpResponse;
 @Service
 @RequiredArgsConstructor
 public class HttpResponseHandler {
-    private final HttpClient httpClient = HttpClient.newHttpClient();
+    private final HttpClient httpClient;
 
     public String getHttpResponse(String url, String apiKey) {
         try {

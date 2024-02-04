@@ -20,11 +20,11 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class MovieRecommendationService {
     @Value("${GPT.API.KEY}")
-    private String gptApiKey;
+    String gptApiKey;
     @Value("${GPT.API.MODEL}")
-    private String model;
+    String model;
     @Value("${GPT.API.COMMAND}")
-    private String commandForGpt;
+    String commandForGpt;
 
     public ResponseEntity<MovieRecommendation> getMovieRecommendations(String movieGenre) {
         try {

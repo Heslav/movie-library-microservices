@@ -20,7 +20,7 @@ public class JsonResponseMapper {
         try {
             firstMovieFromResponse = objectMapper.readTree(response).get("d").get(0);
         } catch (JsonProcessingException e) {
-            throw new CannotParseJsonException("Cannot properly map Json response from Imdb API. Try again with different title");
+            throw new CannotParseJsonException("Cannot properly map Json response from Imdb API. Try again with different title.");
         }
         String movieTitle = firstMovieFromResponse.get("l").asText();
         int releaseYear = firstMovieFromResponse.get("y").asInt();
